@@ -1,4 +1,4 @@
-@extends('pacientes.layout')
+@extends('produtos.layout')
 
 @section('title',__('(CRUD Laravel)'))
 
@@ -38,13 +38,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($pacientes as $paciente)
+                            @foreach($produtos as $produtos)
                             <tr>
-                                <td>{{$paciente->id}}</td>
-                                <td>{{$paciente->nome}}</td>
-                                <td>{{$paciente->genero}}</td>
+                                <td>{{$produtos->id}}</td>
+                                <td>{{$produtos->nome}}</td>
+                                <td>{{$produtos->genero}}</td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('pacientes.show', $paciente->id)}}"
+                                    <a href="{{ route('produtos.show', $produtos->id)}}"
                                         class="btn btn-info btn-sm">@lang('Abrir')
                                     </a>
                                 </td>

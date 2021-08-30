@@ -15,10 +15,10 @@ class ProdutoController extends Controller
     public function index()
     {
             // obtendo os dados de todos os produtos
-            $produtos = Produto::all();
+            $produtos = produto::all();
             // chamando a tela e enviando o objeto $produtos
             // como parâmetro
-            return view('Produtos.index', compact('Produtos'));
+            return view('produtos.index', compact('produtos'));
     }
 
     /**
