@@ -54,7 +54,7 @@ class ProdutoController extends Controller
         $produto = produto::create($validateData);
         // redirecionando para a tela principal do módulo
         // de produtos
-        return redirect('/produto')->with('success','Dados adicionados com sucesso!');
+        return redirect('/prod')->with('success','Dados adicionados com sucesso!');
     }
 
     /**
@@ -113,7 +113,7 @@ class ProdutoController extends Controller
         // da persistência (atualização) dos dados validados 
         Produto::whereId($id)->update($validateData);
         // redirecionando para o diretório raiz (index)
-        return redirect('/produtos')->with('success', 
+        return redirect('/prod')->with('success', 
         'Dados atualizados com sucesso!');
     }
 
@@ -130,7 +130,7 @@ class ProdutoController extends Controller
         // realizando a exclusão
         $produto->delete();
         // redirecionando para o diretório raiz (index)
-        return redirect('/produtos')->with('success', 
+        return redirect('/prod')->with('success', 
         'Dados removidos com sucesso!');
     }
 }

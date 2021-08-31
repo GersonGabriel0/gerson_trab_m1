@@ -28,7 +28,7 @@
                     </div>
                     @endif
 
-                    {!! Form::open(['action' =>'ProdController@store', 'method' => 'POST'])!!}
+                    {!! Form::open(['action' =>'ProdutoController@store', 'method' => 'POST'])!!}
 
                     <div class="form-group">
                         {!! Form::label(__('Tipo do Produto:')) !!}

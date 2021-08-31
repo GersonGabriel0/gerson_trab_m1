@@ -1,4 +1,4 @@
-@extends('produto.layout')
+@extends('produtos.layout')
 
 @section('title',__($produto->tipo . ': Produtos'))
 

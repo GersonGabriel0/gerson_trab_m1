@@ -54,17 +54,17 @@
                                 <td>{{$produtos->peso}}</td>
                                 <td>{{$produtos->descricao}}</td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('produtos.show', $produto->id)}}"
+                                    <a href="{{ route('prod.show', $produtos->id)}}"
                                         class="btn btn-info btn-sm">@lang('Abrir')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('produtos.edit', $produto->id)}}"
+                                    <a href="{{ route('prod.edit', $produtos->id)}}"
                                         class="btn btn-primary btn-sm">@lang('Editar')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <form action="{{ route('produtos.destroy', $produto->id)}}" method="post">
+                                    <form action="{{ route('prod.destroy', $produtos->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
