@@ -1,6 +1,6 @@
-@extends('pacientes.layout')
+@extends('produtos.layout')
 
-@section('title',__('Editar (CRUD Laravel)'))
+@section('title',__('Editar (Produtos)'))
 
 @push('css')
 <style>
@@ -15,8 +15,8 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span>@lang('Editar (CRUD Laravel)')</span>
-                        <a href="{{ url('pacientes') }}" class="btn-info btn-sm">
+                        <span>@lang('Editar (Produtos)')</span>
+                        <a href="{{ url('prod') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -28,21 +28,46 @@
                     </div>
                     @endif
 
-                    {!! Form::open(['action' => ['PacienteController@update',$paciente->id], 'method' => 'PUT'])!!}
+                    {!! Form::open(['action' => ['ProdutoController@update',$produto->id], 'method' => 'PUT'])!!}
 
                     <div class="form-group">
-                        {!! Form::label(__('Nome do Paciente:')) !!}
-                        {!! Form::text("nome", $paciente->nome ,["class"=>"form-control","required"=>"required"]) !!}
+                        {!! Form::label(__('Tipo:')) !!}
+                        {!! Form::text("tipo", $produto->tipo ,["class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
-                        {!! Form::label(__('Gênero:')) !!}
-                        {!! Form::text("genero", $paciente->genero ,["id" => "genero", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::label(__('Modelo:')) !!}
+                        {!! Form::text("modelo", $produto->modelo ,["class"=>"form-control","required"=>"required"]) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label(__('marca:')) !!}
+                        {!! Form::text("marca", $produto->marca ,["class"=>"form-control","required"=>"required"]) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label(__('precoVenda:')) !!}
+                        {!! Form::text("precoVenda", $produto->precoVenda ,["class"=>"form-control","required"=>"required"]) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label(__('cor:')) !!}
+                        {!! Form::text("cor", $produto->cor ,["class"=>"form-control","required"=>"required"]) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label(__('peso:')) !!}
+                        {!! Form::text("peso", $produto->peso ,["class"=>"form-control","required"=>"required"]) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label(__('descricao:')) !!}
+                        {!! Form::text("descricao", $produto->descricao ,["id" => "genero", "class"=>"form-control mmss","required"=>"required"]) !!}
                     </div>
 
                     <div class="well well-sm clearfix">
                         <button class="btn btn-success pull-right" title="@lang('Salvar')"
-                            type="submit">@lang('Adicionar')</button>
+                            type="submit">@lang('Atualizar')</button>
                     </div>
 
                     {!! Form::close() !!}

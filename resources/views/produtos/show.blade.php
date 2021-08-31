@@ -1,6 +1,6 @@
-@extends('pacientes.layout')
+@extends('produto.layout')
 
-@section('title',__($paciente->nome . ': CRUD Laravel'))
+@section('title',__($produto->tipo . ': Produtos'))
 
 @push('css')
 <style>
@@ -24,8 +24,8 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$paciente->nome}}</span>: (@lang('CRUD Laravel'))</span>
-                        <a href="{{ url('pacientes') }}" class="btn-info btn-sm">
+                        <span><span class="text-info">{{$produto->tipo}}</span>: (@lang('Produtos'))</span>
+                        <a href="{{ url('prod') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -42,23 +42,43 @@ table th{
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
-                          <th align="left">{{$paciente->id}}</th>
+                          <th align="left">{{$produto->id}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Nome do Paciente')</strong>:</th>
-                            <th align="left">{{$paciente->nome}}</th>
+                            <th align="left"><strong>@lang('tipo')</strong>:</th>
+                            <th align="left">{{$produto->tipo}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Gênero')</strong>:</th>
-                            <th align="left">{{$paciente->genero}}</th>
+                            <th align="left"><strong>@lang('modelo')</strong>:</th>
+                            <th align="left">{{$produto->modelo}}</th>
+                          </tr>
+                          <tr>
+                            <th align="left"><strong>@lang('marca')</strong>:</th>
+                            <th align="left">{{$produto->marca}}</th>
+                          </tr>
+                          <tr>
+                            <th align="left"><strong>@lang('Preço Venda')</strong>:</th>
+                            <th align="left">{{$produto->precoVenda}}</th>
+                          </tr>
+                          <tr>
+                            <th align="left"><strong>@lang('cor')</strong>:</th>
+                            <th align="left">{{$produto->cor}}</th>
+                          </tr>
+                          <tr>
+                            <th align="left"><strong>@lang('peso')</strong>:</th>
+                            <th align="left">{{$produto->peso}}</th>
+                          </tr>
+                          <tr>
+                            <th align="left"><strong>@lang('Descrição')</strong>:</th>
+                            <th align="left">{{$produto->descricao}}</th>
                           </tr>
                           <tr>
                             <th align="left"><strong>@lang('Adicionado')</strong>:</th>
-                            <th align="left">{{$paciente->created_at}}</th>
+                            <th align="left">{{$produto->created_at}}</th>
                           </tr>
                           <tr>
                               <th align="left"><strong>@lang('Atualizado')</strong>:</th>
-                              <th align="left">{{$paciente->updated_at}}</th>
+                              <th align="left">{{$produto->updated_at}}</th>
                           </tr>
                         </table>
 
